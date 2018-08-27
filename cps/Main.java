@@ -9,7 +9,7 @@ public class Main {
    * Starts the program. must have String[] args to be recognized as main
    *
    * @throws Exception
-   *           from stuff :(
+   *           from gui
    */
   public static void main(String[] args) {
     // try (ProgramPortal portal = new ProgramPortal(DerbyDatabase.ProgramDB)) {
