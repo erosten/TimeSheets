@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="Program" transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+
+		<jta-data-source>java:/ProgramDS</jta-data-source>
+
+		<class>cps.core.model.employee.PersonName</class>
+		<class>cps.core.model.employee.Employee</class>
+		<class>cps.core.model.employee.EmployeeWageChange</class>
+		<class>cps.core.model.employee.EmployeeWage</class>
+		<class>cps.core.model.timeSheet.JobTime</class>
+		<class>cps.core.model.timeSheet.Time</class>
+		<class>cps.core.model.timeSheet.JobTimes</class>
+		<class>cps.core.model.timeSheet.JobPay</class>
+		<class>cps.core.model.timeSheet.JobTravelMethod</class>
+		<class>cps.core.model.timeSheet.JobTravel</class>
+		<class>cps.core.model.timeSheet.JobCode</class>
+		<class>cps.core.model.timeSheet.JobEntry</class>
+		<class>cps.core.model.timeSheet.JobWage</class>
+		<class>cps.core.model.timeSheet.TimeSheetWage</class>
+		<class>cps.core.model.timeSheet.EmployeeSheet</class>
+		<class>cps.core.model.timeSheet.Extras</class>
+		<class>cps.core.model.timeSheet.Addition</class>
+		<class>cps.core.model.timeSheet.ExtraName</class>
+		<class>cps.core.model.timeSheet.JobEntries</class>
+		<class>cps.core.model.timeSheet.WageTotals</class>
+		<class>cps.core.model.timeSheet.WageTotal</class>
+		<class>cps.core.model.timeSheet.TimeSheet</class>
+		<class>cps.core.model.timeSheet.Deduction</class>
+		<class>cps.core.model.timeSheet.StandardDeduction</class>
+		<class>cps.core.model.timeSheet.ExtraTotal</class>
+		<class>cps.err.model.Bug</class>
+		<class>cps.err.model.SolutionStep</class>
+
+		<!-- classes to persist are added here -->
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+
+		<properties>
+			<!-- this line sets the persistence jdbc driver variable to the embedded 
+				derby driver -->
+
+			<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver" />
+
+			<!-- "This occurs because Eclipse Link generate query with out knowing 
+				the database, so they generate a query common to most DBMS" -->
+			<property name="eclipselink.target-database" value="Derby" />
+
+			<!-- this line sets the JDBC URL to the locally specified derby database -->
+			<property name="javax.persistence.jdbc.url" value="jdbc:derby:ProgramDB;create=true" />
+
+			<!-- Sets the user and password to -->
+			<property name="javax.persistence.jdbc.user" value="APP" />
+			<property name="javax.persistence.jdbc.password" value="APP" />
+
+			<!-- Logging Paremeters set here -->
+			<property name="eclipselink.logging.level" value="INFO" />
+			<property name="eclipselink.logging.level.sql" value="INFO" />
+			<!-- enable SQL parameter binding visibility logging to override ER 329852 -->
+			<property name="eclipselink.logging.parameters" value="true" />
+
+
+
+			<!-- EclipseLink should create the database schema automatically -->
+			<property name="eclipselink.ddl-generation" value="create-tables" />
+			<!-- Tell eclipselink which database to use (controls custom operations 
+				& sql generation -->
+			<property name="eclipselink.ddl-generation.output-mode"
+				value="database" />
+			<!-- https://www.eclipse.org/eclipselink/documentation/2.5/jpa/extensions/p_target_database.htm -->
+			<property name="eclipselink.target-database"
+				value="org.eclipse.persistence.platform.database.JavaDBPlatform" />
+
+
+
+			<!-- -->
+			<property name="eclipselink.ddl-generation-mode" value="ddl_database_generation" /><!-- -->
+			<property name="eclipselink.weaving" value="static" />
+
+			<!-- sets exception throwing on or off (default = true) -->
+			<property name="oracle.orm.throw.exceptions" value="true" />
+			<!-- set whether entitymanager fac is shared? default = true -->
+			<property name="eclipselink.multitenant.tenants-share-emf"
+				value="true" />
+			<!-- set whether cache is shared default = false -->
+			<property name="eclipselink.multitenant.tenants-share-cache"
+				value="false" />
+		</properties>
+	</persistence-unit>
+
+	<persistence-unit name="Test" transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<jta-data-source>java:/TestDS</jta-data-source>
+
+		<class>cps.core.model.employee.PersonName</class>
+		<class>cps.core.model.employee.Employee</class>
+		<class>cps.core.model.employee.EmployeeWageChange</class>
+		<class>cps.core.model.employee.EmployeeWage</class>
+		<class>cps.core.model.timeSheet.JobTime</class>
+		<class>cps.core.model.timeSheet.Time</class>
+		<class>cps.core.model.timeSheet.JobTimes</class>
+		<class>cps.core.model.timeSheet.JobPay</class>
+		<class>cps.core.model.timeSheet.JobTravelMethod</class>
+		<class>cps.core.model.timeSheet.JobTravel</class>
+		<class>cps.core.model.timeSheet.JobCode</class>
+		<class>cps.core.model.timeSheet.JobEntry</class>
+		<class>cps.core.model.timeSheet.JobWage</class>
+		<class>cps.core.model.timeSheet.TimeSheetWage</class>
+		<class>cps.core.model.timeSheet.EmployeeSheet</class>
+		<class>cps.core.model.timeSheet.Extras</class>
+		<class>cps.core.model.timeSheet.Addition</class>
+		<class>cps.core.model.timeSheet.ExtraName</class>
+		<class>cps.core.model.timeSheet.JobEntries</class>
+		<class>cps.core.model.timeSheet.WageTotals</class>
+		<class>cps.core.model.timeSheet.WageTotal</class>
+		<class>cps.core.model.timeSheet.TimeSheet</class>
+		<class>cps.core.model.timeSheet.Deduction</class>
+		<class>cps.core.model.timeSheet.StandardDeduction</class>
+		<class>cps.core.model.timeSheet.ExtraTotal</class>
+		<class>cps.err.model.Bug</class>
+		<class>cps.err.model.SolutionStep</class>
+		<properties>
+
+			<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver" />
+			<property name="eclipselink.target-database" value="Derby" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:derby:TestDB;create=true" />
+			<property name="eclipselink.ddl-generation" value="create-tables" />
+			<property name="eclipselink.target-database"
+				value="org.eclipse.persistence.platform.database.JavaDBPlatform" />
+			<property name="eclipselink.logging.level" value="ALL" />
+			<property name="eclipselink.logging.level.sql" value="ALL" />
+			<property name="eclipselink.target-server" value="None" />
+		</properties>
+	</persistence-unit>
+	<persistence-unit name="BugTracker" transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<jta-data-source>java:/BugTrackerDS</jta-data-source>
+
+		<class>cps.err.model.Bug</class>
+		<class>cps.err.model.SolutionStep</class>
+
+		<properties>
+
+			<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver" />
+			<property name="eclipselink.target-database" value="Derby" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:derby:TestDB;create=true" />
+			<property name="eclipselink.ddl-generation" value="create-tables" />
+			<property name="eclipselink.target-database"
+				value="org.eclipse.persistence.platform.database.JavaDBPlatform" />
+			<property name="eclipselink.logging.level" value="ALL" />
+			<property name="eclipselink.logging.level.sql" value="ALL" />
+			<property name="eclipselink.target-server" value="None" />
+		</properties>
+	</persistence-unit>
+</persistence>
