@@ -36,7 +36,7 @@ public class Loader implements ActionListener {
     progressInfo.setVerticalAlignment(SwingConstants.BOTTOM);
     loadingDescPanel.setLayout(new BorderLayout());
     loadingDescPanel.add(progressInfo);
-    ImageIcon loading = new ImageIcon("ajax-loader-gif.gif");
+    ImageIcon loading = new ImageIcon("src/resources/ajax-loader-gif.gif");
     JLabel progressGif = new JLabel(loading);
     progressGif.setText("Loading...");
     progressGif.setVerticalAlignment(SwingConstants.CENTER);
