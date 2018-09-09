@@ -1,29 +1,65 @@
 
 package cps.gui.core;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 
-/**
- *
- * 
- * 
- * @author Thomas Otero H3R3T1C
- * 
- */
 public class Updater {
 
-  private final static String versionURL = "https://custodialplus.000webhostapp.com/version";
+  private final static String versionURL = "https://github.com/erosten/TimeSheets/blob/master/version";
 
   private final static String historyURL = "http://custodialplus.000webhostapp.com/history";
 
-  public static String getLatestVersion() throws Exception
+  //
+  // public static String getLatestVersion() throws Exception {
+  //
+  // String s;
+  // Process p;
+  // try {
+  // p = Runtime.getRuntime().exec("ls -aF");
+  // BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
+  // while ((s = br.readLine()) != null)
+  // System.out.println("line: " + s);
+  // p.waitFor();
+  // System.out.println("exit: " + p.exitValue());
+  // p.destroy();
+  // } catch (Exception e) {
+  // }
+  // return "";
+  // }
 
-  {
-
+  public static String getLatestVersion() throws Exception {
     String data = getData(versionURL);
-
     return data.substring(data.indexOf("[version]") + 9, data.indexOf("[/version]"));
+  }
+
+  public static String getCurrentVersion() {
+    String fileName = "src/version.txt";
+    // This will reference one line at a time
+    String line = null;
+    try {
+      // FileReader reads text files in the default encoding.
+      FileReader fileReader = new FileReader(fileName);
+
+      // Always wrap FileReader in BufferedReader.
+      BufferedReader bufferedReader = new BufferedReader(fileReader);
+      while ((line = bufferedReader.readLine()) != null) {
+        System.out.println(line);
+      }
+      // Always close files.
+      bufferedReader.close();
+    } catch (FileNotFoundException ex) {
+      System.out.println("Unable to open file '" + fileName + "'");
+    } catch (IOException ex) {
+      System.out.println("Error reading file '" + fileName + "'");
+      // Or we could just do this:
+      // ex.printStackTrace();
+    }
+    return line.substring(line.indexOf("[version]") + 9, line.indexOf("[/version]"));
 
   }
 

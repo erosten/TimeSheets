@@ -60,15 +60,15 @@ public class Loader implements ActionListener {
 
   private static void checkForAvailableUpdates() {
     progressInfo.setText("Checking for updates...");
+    String gitVersion = "";
     try {
-
-      System.out.println(Updater.getLatestVersion());
-
+      gitVersion = Updater.getLatestVersion();
     } catch (Exception ex) {
-
       ex.printStackTrace();
-
     }
+    String currentVersion = Updater.getCurrentVersion();
+    System.out.println(gitVersion);
+    System.out.println(currentVersion);
 
   }
 
