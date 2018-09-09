@@ -22,3 +22,29 @@
 2018-09-09 15:13:24,902 INFO [main] c.g.c.Loader [Loader.java:35] Starting Program
 2018-09-09 15:31:44,198 INFO [main] c.g.c.Loader [Loader.java:35] Starting Program
 2018-09-09 15:31:47,253 INFO [main] c.c.ProgramPortal [ProgramPortal.java:54] Trying to initialize Program Portal..
+2018-09-09 15:43:15,677 INFO [main] c.g.c.Loader [Loader.java:35] Starting Program
+2018-09-09 15:43:49,135 INFO [main] c.g.c.Loader [Loader.java:35] Starting Program
+2018-09-09 15:44:29,168 INFO [main] c.g.c.Loader [Loader.java:35] Starting Program
+2018-09-09 15:45:41,802 INFO [main] c.g.c.Loader [Loader.java:35] Starting Program
+2018-09-09 15:48:27,607 INFO [main] c.g.c.Loader [Loader.java:35] Starting Program
+2018-09-09 15:49:03,670 INFO [main] c.g.c.Loader [Loader.java:35] Starting Program
+2018-09-09 15:49:06,442 INFO [main] c.c.ProgramPortal [ProgramPortal.java:54] Trying to initialize Program Portal..
+2018-09-09 15:49:09,564 INFO [main] c.c.ProgramPortal [ProgramPortal.java:59] Program Portal initialized and ready for operations.
+2018-09-09 15:51:02,163 INFO [main] c.g.c.Loader [Loader.java:35] Starting Program
+2018-09-09 15:51:05,156 INFO [main] c.c.ProgramPortal [ProgramPortal.java:54] Trying to initialize Program Portal..
+2018-09-09 15:51:07,880 INFO [main] c.c.ProgramPortal [ProgramPortal.java:59] Program Portal initialized and ready for operations.
+2018-09-09 15:51:46,635 INFO [main] c.g.c.Loader [Loader.java:35] Starting Program
+2018-09-09 15:51:49,008 INFO [main] c.c.ProgramPortal [ProgramPortal.java:54] Trying to initialize Program Portal..
+2018-09-09 15:51:52,043 INFO [main] c.c.ProgramPortal [ProgramPortal.java:59] Program Portal initialized and ready for operations.
+2018-09-09 15:51:53,396 INFO [main] c.g.c.Loader [Loader.java:83] Exiting Program
+2018-09-09 15:56:14,878 INFO [main] c.g.c.Loader [Loader.java:35] Starting Program
+2018-09-09 15:56:17,543 INFO [main] c.c.ProgramPortal [ProgramPortal.java:54] Trying to initialize Program Portal..
+2018-09-09 15:56:20,372 INFO [main] c.c.ProgramPortal [ProgramPortal.java:59] Program Portal initialized and ready for operations.
+2018-09-09 15:56:21,994 INFO [main] c.g.c.Loader [Loader.java:83] Exiting Program
+2018-09-09 15:56:42,824 INFO [main] c.g.c.Loader [Loader.java:35] Starting Program
+2018-09-09 15:56:44,862 INFO [main] c.c.ProgramPortal [ProgramPortal.java:54] Trying to initialize Program Portal..
+2018-09-09 15:58:56,795 INFO [main] c.g.c.Loader [Loader.java:35] Starting Program
+2018-09-09 15:59:23,593 INFO [main] c.g.c.Loader [Loader.java:35] Starting Program
+2018-09-09 15:59:27,213 INFO [main] c.c.ProgramPortal [ProgramPortal.java:54] Trying to initialize Program Portal..
+2018-09-09 15:59:29,764 INFO [main] c.c.ProgramPortal [ProgramPortal.java:59] Program Portal initialized and ready for operations.
+2018-09-09 15:59:30,955 INFO [main] c.g.c.Loader [Loader.java:82] Exiting Program
